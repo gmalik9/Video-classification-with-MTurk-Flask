@@ -1,0 +1,87 @@
+
+  <!DOCTYPE html>
+  <!-- saved from url=(0056)https://getbootstrap.com/docs/4.0/examples/navbar-fixed/ -->
+  <html lang="en">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico"> -->
+  
+      <title>Pathtracker Human Data collection</title>
+  
+      <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbar-fixed/"> -->
+  
+      <!-- Bootstrap core CSS -->
+      <link href="../static/bootstrap.min.css" rel="stylesheet">
+  
+      <!-- Custom styles for this template -->
+      <link href="../static/navbar-top-fixed.css" rel="stylesheet">
+    </head>
+  
+    <script>
+      function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+          elmnt = z[i];
+          /*search for elements with a certain atrribute:*/
+          file = elmnt.getAttribute("w3-include-html");
+          if (file) {
+            /*make an HTTP request using the attribute value as the file name:*/
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4) {
+                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                /*remove the attribute, and call this function once more:*/
+                elmnt.removeAttribute("w3-include-html");
+                includeHTML();
+              }
+            }      
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            /*exit the function:*/
+            return;
+          }
+        }
+      };
+      </script>
+  
+    <body>
+  
+      <div w3-include-html="../static/nav.html"></div> 
+  
+      <main role="main" class="container">
+        <!-- <div class="jumbotron">
+          <h1>Navbar example</h1>
+          <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser's viewport.</p>
+          <a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/4.0/components/navbar/" role="button">View navbar docs »</a>
+        </div> -->
+        <div class="jumbotron">
+            <h3> Your Mturk credentials are missing. Please go back to the portal and click on the right link. </h3>
+
+      </div>
+  
+      </main>
+      
+  
+      <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="../static/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+      <script src="../static/popper.min.js"></script>
+      <script src="../static/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
+    
+      <script>
+        includeHTML();
+      </script>
+  
+  
+  </body>
+  </html>
+  
+  

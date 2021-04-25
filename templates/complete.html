@@ -1,0 +1,195 @@
+
+
+
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://getbootstrap.com/docs/4.0/examples/navbar-fixed/ -->
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico"> -->
+
+    <title>Pathtracker Human Data collection</title>
+
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbar-fixed/"> -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/navbar-top-fixed.css" rel="stylesheet">
+
+    <style>
+        .tooltip {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .tooltip .tooltiptext {
+          visibility: hidden;
+          width: 140px;
+          background-color: #555;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 5px;
+          position: absolute;
+          z-index: 1;
+          bottom: 150%;
+          left: 50%;
+          margin-left: -75px;
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+        
+        .tooltip .tooltiptext::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent;
+        }
+        
+        .tooltip:hover .tooltiptext {
+          visibility: visible;
+          opacity: 1;
+        }
+        </style>
+
+</head>
+
+<script>
+    function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /*loop through a collection of all HTML elements:*/
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+        /*make an HTTP request using the attribute value as the file name:*/
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /*remove the attribute, and call this function once more:*/
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+            }
+        }      
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /*exit the function:*/
+        return;
+        }
+    }
+    };
+    </script>
+
+<body>
+
+    <div w3-include-html="../static/nav.html"></div> 
+
+    <main role="main" class="container">
+    <!-- <div class="jumbotron">
+        <h1>Navbar example</h1>
+        <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser's viewport.</p>
+        <a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/4.0/components/navbar/" role="button">View navbar docs »</a>
+    </div> -->
+    <div class="jumbotron">
+
+        <h2>Congratulations! Your experiment is now complete. </h2>
+        <br>
+        Thank you for participating in our study. 
+        <br>
+        
+        <br><br>
+        
+        
+
+          <!-- <div class="input-group input-group-lg">
+            <input type="text" id="foo" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" value="{{unique_string}}" readonly>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" data-clipboard-target="#foo">Copy</button>
+            </div>
+          </div> -->
+
+        <!-- <div class="input-group input-group-lg">
+            <input type="text" id="foo" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" value="{{unique_string}}" readonly>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" id="copy-button" data-toggle="tooltip" data-placement="button" title="Copy to Clipboard"> 
+                <span class="tooltiptext" id="myTooltip">Copy</span>
+                 </button>
+            </div>
+          </div> -->
+
+          <div class="page-content page-container" id="page-content">
+              <div class="padding">
+                  <div class="row container d-flex justify-content-center">
+                      <div class="col-12 grid-margin">
+                          <div class="card">
+                              <div class="row">
+                                  <!-- <div class="col-md-6"> -->
+                                      <div class="card-body">
+                                          <h4 class="card-title">Please paste the unique code displayed below to your Mechanical Turk account to process the payment.</h4>
+                                          <!-- <p class="card-description">Cut/copy from text input</p>  -->
+                                          <!-- <input type="text" id="clipboardExample1" class="form-control" value="{{unique_string}}" disabled> -->
+                                          <div class="input-group input-group-lg">
+                                            <input type="text" id="foo" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" value="{{unique_string}}" readonly>
+                                            <div class="input-group-append">
+                                              <button class="btn btn-outline-primary" type="button" data-clipboard-target="#foo">Copy</button>
+                                            </div>
+                                          </div>
+                                      <!-- </div> -->
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+        <!-- <div class="input-group input-group-lg">
+            <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" value="{{unique_string}}" disabled>
+          </div> -->
+
+        <br>
+        Please close your browser window after you paste the code in your survey link screen on the MTurk website.
+
+    </div>
+
+    </main>
+    
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../static/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../static/popper.min.js"></script>
+    <script src="../static/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+   
+
+    <script>
+    includeHTML();
+    </script>
+    <script>
+        $( document ).ready(function() {
+
+new ClipboardJS('.btn');
+
+});
+    </script>
+   
+
+</body>
+</html>
+
