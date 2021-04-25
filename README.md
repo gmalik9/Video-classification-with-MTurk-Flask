@@ -8,8 +8,6 @@ It can be easily customized for other image/video based human experiments as is 
 
 Author: Girik Malik
 
-
 gmalik@ccs.neu.edu
-
 
 http://www.ccs.neu.edu/~gmalik/
