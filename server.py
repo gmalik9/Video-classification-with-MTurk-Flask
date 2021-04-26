@@ -6,7 +6,7 @@
 
   The code assumes your videos to be in a directory, segregated in different sub-directories based on the conditions. 
   It then randomly generates a number that can be used to append to the video url for rendering the video on a webpage.
-  The directory 'experiments' describes the structure of experiments, that remains fixed for all participants, wherein
+  The dictionary 'experiments' describes the structure of experiments, that remains fixed for all participants, wherein
   everyone gets to see the same condition at the same trial, but a different video chosen randomly from that condition.
 
   There is also separate support for catch trials.
