@@ -1,0 +1,30 @@
+
+    <h1>
+        <!-- The Italian Tourist -->
+        <!-- Hello {{ userid }} -->
+      </h1>
+      {% for video in videos %}
+      <center>
+        <p>
+        <form method="post" action="/submit">
+        <video width="256" height="256" controls>
+          <source src="{{video.video_url}}" type="video/mp4">
+            Your browser does not support the video tag. Try using the latest version of Chrome or Firefox.
+          </video>
+          <br/>
+          <input type="hidden" name="video_url" value="{{video.video_url}}">
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary">
+              <input type="radio" name="response" id="positive" value="1"> Positive
+            </label>
+            <label class="btn btn-danger">
+              <input type="radio" name="response" id="negative" value="0"> Negative
+            </label>
+          </div>
+          <br>
+            <input type="submit" class="btn btn-success" value="Submit">
+          </form>
+          </p>
+        </center>
+  {% endfor %}
+  

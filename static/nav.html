@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Pathtracker</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="https://getbootstrap.com/docs/4.0/examples/navbar-fixed/#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="https://getbootstrap.com/docs/4.0/examples/navbar-fixed/#">Disabled</a>
+        </li> -->
+
+      </ul>
+      <!-- <form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+        Instructions
+      </button>
+        </li>
+
+
+
+      </ul>
+      <!-- <form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+    </div>
+  </nav>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitle">Instructions</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      You will be presented with a series of short videos that show a few white dots moving about on a black background. There will also be an empty red and empty blue marker.
+      <br> <br>
+      There will always be a dot that starts in a red marker at the beginning of the video. At the end of a short (few seconds) video, you will be asked to indicate whether or not the dot that left the red marker at the beginning of the video is the same dot that went inside the blue marker at the end of the video.
+      <br> <br>
+      If the dot leaving the red marker is the same as the one that enters the blue marker, please click the <b>right arrow key</b> on your keyboard, indicating that it is a <b> <i> positive </i> </b> video.
+      <br> <br>
+      If the dot leaving the red marker ends up at a random location in the video and another dot ends in the blue marker at the end of the video, please click the <b>left arrow key</b> on your keyboard, indicating that it is a <b><i>negative</i></b> video.
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+</div>

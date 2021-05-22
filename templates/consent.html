@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://getbootstrap.com/docs/4.0/examples/navbar-fixed/ -->
+<html lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico"> -->
+
+    <title>Pathtracker Human Data collection</title>
+
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/navbar-fixed/"> -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/navbar-top-fixed.css" rel="stylesheet">
+  </head>
+
+  <script>
+    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /*loop through a collection of all HTML elements:*/
+      z = document.getElementsByTagName("*");
+      for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+          /*make an HTTP request using the attribute value as the file name:*/
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /*remove the attribute, and call this function once more:*/
+              elmnt.removeAttribute("w3-include-html");
+              includeHTML();
+            }
+          }      
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /*exit the function:*/
+          return;
+        }
+      }
+    };
+    </script>
+
+  <body>
+
+    <div w3-include-html="../static/nav.html"></div> 
+
+
+    <main role="main" class="container">
+      <!-- <div class="jumbotron">
+        <h1>Navbar example</h1>
+        <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser's viewport.</p>
+        <a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/4.0/components/navbar/" role="button">View navbar docs »</a>
+      </div> -->
+      <div class="jumbotron">
+        <div id="container-consent">
+            <div id="consent">
+                <h1>We need your consent to proceed</h1>
+                <hr>
+                <div class="legal well">
+                    <p>You are invited to take part in a Brown University research study. Your participation is voluntary.</p>
+                    <br>
+                    <p><strong>RESEARCHER: </strong>Dr. Thomas Serre
+
+                    <p><strong> PURPOSE: </strong> This study is about human performance in tasks involving video classification, and will be performed through Amazon MTurk. In this experiment, we seek to gain a basic understanding of how the visual system tracks dots following random trajectories in a video. You are being asked to be in this study because your performance in the task will provide data that is useful towards that understanding.
+
+                    <p><strong> PROCEDURES: </strong> You will be asked to view videos of dots meandering on a black background, where <em>one special dot will leave from inside of a red marker</em>. You will be asked to indicate if the dot that left the red marker is <em>the same as the one that entered blue marker at the end of the video</em> or not.
+                      
+                    <p><strong> TIME INVOLVED: </strong> You can participate in the experiment at your own pace, but typically the session should last less than 25 minutes.
+
+                    <p><strong>COMPENSATION: </strong>You will receive $8 compensation for your time.<strong> <em>  You must complete the entire experiment to receive compensation for your participation. </em> </strong>
+
+                    <p><strong>RISKS: </strong> There are no anticipated risks for the participants in the current study, though you are free to stop participating at any time by closing your browser.
+
+                    <p><strong> BENEFITS: </strong> There are no direct benefits for the participants in the current study. However, data from this study may improve scientists' knowledge of how the brain tracks one among similar looking objects. The researchers intend to use data from this study for research projects that may appear in scientific conferences and journals.
+
+                    <p><strong> CONFIDENTIALITY: </strong> The data collected from your participation will be anonymous and confidential. By signing this document, you permit us to use anonymized information for scientific purposes including teaching and/or publication. 
+
+                    <p><strong> IMPORTANT INFORMATION ABOUT YOUR MTurk ID: </strong> Your MTurk ID does not directly identify you, but it can be linked to your public profile page. You may want to restrict what information you share on this public profile. We will not share your MTurk ID with anyone outside of our research team. If you ever contact us, Amazon.com will automatically insert your email address into the message, so that we can reply to you. We will use your name and email only to respond to your communication and will never distribute it to anyone outside of our research team. For more information about the privacy and confidentiality limitations associated with using MTurk, please refer to Amazon’s MTurk Privacy Notice and contact them for more information: <a href="https://www.mturk.com/mturk/privacynotice" target="_blank"> https://www.mturk.com/mturk/privacynotice </a> and <a href="https://www.mturk.com/mturk/contact" target="_blank"> https://www.mturk.com/mturk/contact </a>.
+                      
+                    <p><strong> CONTACT INFORMATION: </strong> If you have questions or concerns about this research, please contact <a href="mailto:serre-psychophysics@brown.edu"> serre-psychophysics@brown.edu </a>.
+                    
+                    <p><strong> YOUR RIGHTS: </strong> If you have questions about your rights as a research participant, you can contact Brown University’s Human Research Protection Program at <a href="tel:+1-401-863-3050"> (401) 863-3050 </a> or email them at <a href="mailto:IRB@Brown.edu"> IRB@Brown.edu </a>.
+
+                    <p><strong>CONSENT TO PARTICIPATE: </strong> Clicking the link below confirms that you have read and understood the information in this document, are 18 years or older, and that you agree to volunteer as a research participant forthis study.
+
+                    <br>
+
+                    Clicking 'I agree' below indicates that you have understood the information about the experiment and consent to your participation. The participation is voluntary and you may refuse to answer certain questions on the questionnaire and withdraw from the study at any time. This does not waive your legal rights. You can print a copy of the consent form or save this browser window for your own record. If you have further questions related to this research, please contact the researcher.
+                                        </p>
+
+                    <button type="button" class="btn btn-default btn-sm" onClick="window.print();">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-printer-fill" viewBox="0 0 16 16">
+                        <path d="M5 1a2 2 0 0 0-2 2v1h10V3a2 2 0 0 0-2-2H5zm6 8H5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1z"/>
+                        <path d="M0 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1v-2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2H2a2 2 0 0 1-2-2V7zm2.5 1a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
+                      </svg> Print a copy of this
+                    </button>
+                </div>
+
+                <hr>
+                <h4>Do you understand and consent to these terms?</h4>
+                <br>
+
+                <center>
+                  <form method="post" action="/warmup">
+                    <input type="hidden" name="warmuptrial" value="0">
+                    <input type="hidden" name="r" value="0">
+                    <input type="hidden" name="w" value="0">
+
+                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#instructionsModalCenter">
+                      Instructions
+                    </button> -->
+
+                    <!-- <button name="consent" value="agree" type="submit" class="btn btn-primary btn-lg"> -->
+                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#instructionsModalCenter">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                      </svg> I agree 
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button name="consent" value="disagree" type="submit" class="btn btn-danger btn-lg" onClick="onexit()">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                      </svg> No thanks, I do not want to do this HIT
+                    </button>
+                  </form>
+                </center>
+
+            </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal for instructions -->
+<div class="modal fade" id="instructionsModalCenter" tabindex="-1" role="dialog" aria-labelledby="instructionsModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="instructionsModalLongTitle">Please read the following instructions carefully</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>You will be presented with a series of short videos that show a few white dots moving about on a black background. There will also be an empty red and empty blue marker. An example is shown below. 
+        </p>
+        <p>
+          << Please click the start button at the lower left of the video box to view it. The video may be repeated, if you like. >> 
+        </p>
+
+        <center>
+          <!-- <img src="https://web.northeastern.edu/cvl/wp-content/uploads/2020/06/14_dist_red_blue_start_end_pos-2.gif"> -->
+          <video width="256" height="256" controls autoplay>
+            <source src="https://pathtracker.clps.brown.edu/videos/1_output_video_16.mp4" type="video/mp4">
+              Your browser does not support the video tag. Try using the latest version of Chrome.
+            </video>
+        </center>
+        There will always be a dot that starts in a red marker at the beginning of the video. At the end of a short (few seconds) video, you will be asked to indicate whether or not the dot that left the red marker at the beginning of the video is the same dot that went inside the blue marker at the end of the video.
+        <br> <br>
+        If the dot leaving the red marker is the same as the one that enters the blue marker, please click the <b>right arrow key</b> on your keyboard, indicating that it is a <b> <i> positive </i> </b> video.
+        <br> <br>
+        If the dot leaving the red marker ends up at a random location in the video and another dot ends in the blue marker at the end of the video, please click the <b>left arrow key</b> on your keyboard, indicating that it is a <b><i>negative</i></b> video.
+        <br><br>
+        You can view this instructions window anytime by clicking on the <button type="button" class="btn btn-primary">Instructions</button> button at the top right of your screen.
+      </div>
+      <div class="modal-footer">
+
+        <form method="post" action="/warmup">
+          <input type="hidden" name="warmuptrial" value="0">
+          <input type="hidden" name="r" value="0">
+          <input type="hidden" name="w" value="0">
+          <button name="consent" value="agree" type="submit" class="btn btn-primary btn-lg">Proceed <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+          </svg></button>
+          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+    
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../static/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../static/popper.min.js"></script>
+    <script src="../static/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+    
+  
+    <script>
+      includeHTML();
+    </script>
+</body>
+</html>
